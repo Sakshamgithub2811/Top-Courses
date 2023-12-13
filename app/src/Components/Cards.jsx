@@ -1,10 +1,28 @@
-import React from 'react'
+import React, { Fragment } from 'react';
+import Card from './Card';
 
-const Cards = () => {
+const Cards = ({courses}) => {
+  console.log(courses);
+
+  let allCourses = [];
+
+  const getCourses = () =>{
+    Object.values(courses).forEach((coursesCategory)=>{
+      coursesCategory.forEach((course)=>{
+          allCourses.push(course);
+      })
+
+    })
+    return allCourses;
+  }
   return (
-    <div>
-      
-    </div>
+<Fragment>
+  {
+    getCourses().map((course)=>{
+      <Card/>
+    })
+  }
+</Fragment>
   )
 }
 

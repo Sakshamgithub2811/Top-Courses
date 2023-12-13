@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import { Fragment } from 'react';
+import { Fragment,useState,useEffect } from 'react';
 import { apiUrl, filterData } from './data';
 import Navbar from './Components/Navbar';
 import Filter from './Components/Filter';
